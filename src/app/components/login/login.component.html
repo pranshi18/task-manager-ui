@@ -1,0 +1,33 @@
+<div class="main">
+
+    <div class="login-container">
+        <h1>Task Manager</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+            <div class="form-fields">
+                <input formControlName="username" type="text" placeholder="Username" required/>
+
+            </div>
+            
+            <!-- <div class="form-fields">
+                <input formControlName="emailId" type="email" placeholder="Email" />
+            </div> -->
+            
+            <div class="form-fields">
+                <input formControlName="password" type="password" placeholder="password" required/>
+
+            </div>
+            
+            <div style="text-align: center;">
+                <button primary class="login-button" [disabled]="loginForm.invalid" type="submit">Login</button>
+            </div>
+           
+        </form>
+
+        <div *ngIf="errorLogin">
+            <p style="color: red;">The username/password you have entered is incorrect.</p>
+        </div>
+        <p>Don't have an account? <a [routerLink]="['/signup']"> Sign up </a> </p>
+    </div>
+    
+</div>

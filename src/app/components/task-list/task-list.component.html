@@ -1,0 +1,65 @@
+<div class="main">
+
+    <div class="header">
+        
+        <button (click)="logout()" class="logout-button">
+            Logout
+            <!-- <mat-icon>account_circle</mat-icon>Logout -->
+        </button>
+        <h1>My Task Manager</h1>
+       
+    </div>
+    
+
+    <div class="task-list-container">
+        
+        <div class="dropdown-container">
+
+            
+            <!-- <mat-form-field class="custorm-form-field">
+                <mat-label>Category</mat-label>
+                <select matNativeControl [(ngModel)]="selectedCategory" name="category">
+                    @for (cat of categories; track categories) {
+                    <option [value]="cat">{{cat}}</option>
+                    }
+                </select>
+            </mat-form-field> -->
+
+            <!-- <mat-form-field class="example-full-width">
+                <mat-label>Due Date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field> -->
+        </div>
+        
+        <div class="tasks-container">
+
+            <div *ngFor="let task of pendingTasks; let i=index" class="task">
+                <button (click)="completeTask(task)" class="task-button"></button>
+                {{task.title}}
+            </div>
+
+            <div *ngFor="let task of completedTasks; let i=index" class="completedTask">
+                <button (click)="completeTask(task)" class="task-button"></button>
+                {{task.title}}
+            </div>
+        </div>
+
+        <!-- <div class="completed-tasks-container">
+
+            <div *ngFor="let task of allTasks; let i=index" class="task">
+                <button (click)="completeTask(i)"></button>
+                {{task.title}}
+            </div>
+        </div> -->
+
+        <div style="margin: auto auto 20px auto;">
+            <button class="add-task-button" (click)="addTask()">Add Task</button>
+        </div>
+        
+    </div>
+</div>

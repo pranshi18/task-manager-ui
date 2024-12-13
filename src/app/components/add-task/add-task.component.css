@@ -1,0 +1,47 @@
+.main{
+    background-color: #D0EDFF;
+    height: 100%;
+}
+
+h1{
+    color: #0064B0;
+    text-align: center;
+    margin-left: 125px;
+}
+
+.closeButton{
+    margin-left: auto;
+    border: none;
+    background-color: #D0EDFF;
+    margin-right: 10px;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-fields{
+    text-align: center;
+    margin-top: 20px;
+}
+
+form input{
+    width: 75%;
+    height: 30px;
+    padding-left: 10px;
+    border: solid 1px lightgray;
+}
+
+.addButton{
+    width: 80px;
+    height: 30px;
+    margin: 20px auto; 
+}
+
+.success-snackbar{
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+}

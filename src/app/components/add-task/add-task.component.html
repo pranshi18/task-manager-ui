@@ -1,0 +1,39 @@
+<div class="main">
+
+    <div style="display: flex;">
+        <h1>Task Details</h1> 
+        <button (click)="closeDialog()" class="closeButton">
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </div>
+   
+    <form [formGroup]="taskForm" (ngSubmit)="onAdd()">
+
+        <div class="form-fields">
+            <input type="text" formControlName="title" placeholder="title *" required/>
+        </div>
+
+        <!-- <div class="form-fields">
+            <input type="text" formControlName="description" placeholder="description"/>
+        </div>
+
+        <div class="form-fields">
+            <input type="date" formControlName="taskDate" placeholder="Due Date"/>
+        </div>
+
+        <div class="form-fields">
+            <mat-form-field style="width: 78%;">
+                <mat-label>Category</mat-label>
+                <mat-select formControlName="category" name="category">
+                    <mat-option *ngFor="let cat of categories" [value]="cat">
+                        {{cat}}
+                    </mat-option>
+                </mat-select>
+               
+            </mat-form-field>
+        </div> -->
+
+        <button [disabled]="taskForm.invalid" class="addButton"> Add</button>
+    </form>
+
+</div>

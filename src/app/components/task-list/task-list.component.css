@@ -1,0 +1,85 @@
+.main{
+    background-color: #D0EDFF;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.main h1{
+    color: #0064B0;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.logout-button{
+    width: 85px;
+    margin: 20px 20px 0px auto;
+    cursor: pointer;
+}
+
+.task-list-container{
+    background-color: #B1E0FF;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    height: 65vh;
+    border-radius: 20px;
+    margin-top: 40px;
+}  
+
+.dropdown-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    float: right;
+    margin: 20px;
+    margin-left: auto;
+}
+
+.task{
+    margin: 0px 0px 20px 20px;
+    font-family: 'Roboto';
+}
+
+.task-button{
+    height: 18px;
+    border-radius: 100px;
+    width: 18px;
+    border: solid 2px gray;
+    background-color: #B1E0FF;
+    cursor: pointer;
+}
+
+.task-button:hover{
+    background-color: grey;
+}
+
+.task-button:active{
+    background-color: green;
+    transform: scale(0.95);
+}
+
+.tasks-container{
+    
+}
+
+.add-task-button{
+    /* margin: auto auto 20px auto; */
+}
+
+.completed-tasks-container{
+    margin-top: auto;
+}
+
+.completedTask{
+    margin: 0px 0px 20px 20px;
+    font-family: 'Roboto';
+    text-decoration: line-through;
+    color: #000;  
+}
+
+  

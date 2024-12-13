@@ -1,0 +1,35 @@
+<div class="main">
+
+    <div class="login-container">
+        <h1>Sign Up</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+
+            <div class="form-fields">
+                <input formControlName="username" type="text" placeholder="Username" required/>
+
+            </div>
+            
+            <div class="form-fields">
+                <input formControlName="emailId" type="email" placeholder="Email" required/>
+            </div>
+            
+            <div class="form-fields">
+                <input formControlName="password" type="password" placeholder="password" required/>
+            </div>
+            
+            <div style="text-align: center;">
+                <button primary class="login-button" [disabled]="signUpForm.invalid" type="submit">Sign Up</button>
+            </div>
+           
+        </form>
+        
+        <div *ngIf="signUpSuccessful">
+            <p style="color: green;">User registered Successfully <a [routerLink]="['/login']"> Login here </a> </p>
+        </div>
+
+        <div *ngIf="userExists && !signUpSuccessful">
+            <p style="color: red;">User Already Exists <a [routerLink]="['/login']"> Login here </a> </p>
+        </div>
+    </div>
+    
+</div>
